@@ -1,159 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Sign Up</title>
-  <style>
-    body {
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      background: #3d4f63;
-      color: white;
-      font-weight: 300;
-      text-align: center;
-    }
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background: #3d4f63;
+        color: white;
+        font-weight: 300;
+        text-align: center;
+      }
 
-    form {
-      width: 320px;
-      margin: 3rem auto;
-      text-align: left;
-    }
+      form {
+        width: 320px;
+        margin: 3rem auto;
+        text-align: left;
+      }
 
-    h1 {
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
+      h1 {
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
 
-    label,
-    input {
-      display: block;
-    }
+      label,
+      input {
+        display: block;
+      }
 
-    label {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 1.5em;
-      color: #ccc;
-    }
+      label {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 1.5em;
+        color: #ccc;
+      }
 
-    label:hover,
-    label:focus-within {
-      color: white;
-    }
+      label:hover,
+      label:focus-within {
+        color: white;
+      }
 
-    input {
-      color: #27415e;
-      padding: 1em;
-      background: #ececec;
-      border: 3px solid #ececec;
-      margin-top: 0.5em;
-      width: 100%;
-      font-size: 1rem;
-      box-sizing: border-box;
-    }
+      input {
+        color: #27415e;
+        padding: 1em;
+        background: #ececec;
+        border: 3px solid #ececec;
+        margin-top: 0.5em;
+        width: 100%;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
 
-    input:hover {
-      background: white;
-      border-color: white;
-    }
+      input:hover {
+        background: white;
+        border-color: white;
+      }
 
-    input:focus {
-      background: white;
-      border-color: white;
-      outline: none;
-      border-color: hsl(170, 100%, 76%);
-      box-shadow: #2d3742 0px 12px 30px;
-    }
+      input:focus {
+        background: white;
+        border-color: white;
+        outline: none;
+        border-color: hsl(170, 100%, 76%);
+        box-shadow: #2d3742 0px 12px 30px;
+      }
 
-    input.error {
-      border-color: #ff9191;
-    }
+      input.error {
+        border-color: #ff9191;
+      }
 
-    input.error:focus {
-      border-color: #e85f5f;
-    }
+      input.error:focus {
+        border-color: #e85f5f;
+      }
 
-    input[type=submit] {
-      background: hsl(190, 67%, 64%);
-      border-color: hsl(190, 67%, 64%);
-      color: #3d4f63;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      cursor: pointer;
-      animation: glow 3s infinite;
-      margin-top: 3em;
-    }
-
-    input[type=submit]:hover,
-    input[type=submit]:focus {
-      animation: none;
-      background: hsl(170, 100%, 76%);
-      border-color: hsl(170, 100%, 76%);
-    }
-
-    @keyframes glow {
-      0% {
+      input[type=submit] {
         background: hsl(190, 67%, 64%);
         border-color: hsl(190, 67%, 64%);
+        color: #3d4f63;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        cursor: pointer;
+        animation: glow 3s infinite;
+        margin-top: 3em;
       }
 
-      50% {
-        background: hsl(170, 67%, 64%);
-        border-color: hsl(170, 67%, 64%);
+      input[type=submit]:hover,
+      input[type=submit]:focus {
+        animation: none;
+        background: hsl(170, 100%, 76%);
+        border-color: hsl(170, 100%, 76%);
       }
 
-      100% {
-        background: hsl(190, 67%, 64%);
-        border-color: hsl(190, 67%, 64%);
+      @keyframes glow {
+        0% {
+          background: hsl(190, 67%, 64%);
+          border-color: hsl(190, 67%, 64%);
+        }
+
+        50% {
+          background: hsl(170, 67%, 64%);
+          border-color: hsl(170, 67%, 64%);
+        }
+
+        100% {
+          background: hsl(190, 67%, 64%);
+          border-color: hsl(190, 67%, 64%);
+        }
       }
-    }
 
-    .main_error_message {
-      background: #e85f5f;
-      padding: 1em;
-      font-weight: 500;
-      letter-spacing: 1px;
-    }
+      .main_error_message {
+        background: #e85f5f;
+        padding: 1em;
+        font-weight: 500;
+        letter-spacing: 1px;
+      }
 
-    .main_error_message:before {
-      content: '!';
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      line-height: 1em;
-      border-radius: 1em;
-      text-align: center;
-      padding: 0.2em;
-      border: 2px solid white;
-      margin-right: 1em;
-    }
+      .main_error_message:before {
+        content: '!';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        line-height: 1em;
+        border-radius: 1em;
+        text-align: center;
+        padding: 0.2em;
+        border: 2px solid white;
+        margin-right: 1em;
+      }
 
-    .error_message {
-      color: #ff9191;
-      margin: 0.5em 0;
-      text-transform: none;
-      font-weight: 500;
-    }
-  </style>
-</head>
+      .error_message {
+        color: #ff9191;
+        margin: 0.5em 0;
+        text-transform: none;
+        font-weight: 500;
+      }
+    </style>
+  </head>
 
-<body>
-  <main>
-    <form>
-      <h1 class="signup-header">Sign up</h1>
-    </form>
-  </main>
+  <body>
+    <main>
+      <form>
+        <h1 class="signup-header">Avengers Initiative<br>Sign-up Sheet</h1>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required maxlength="32"><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required maxlength="64"><br>
+        
+        <label for="password_verify">Verify password:</label>
+        <input type="password" id="password_verify" name="password_verify" required maxlength="64"><br>
+        
+        <input type="submit" value="Signup">
+      </form>
+    </main>
 
-  <script>
-    document.querySelector('form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const { username, password } = e.target;
-      console.log(username.value);
-      console.log(password.value);
-    });
-  </script>
+    <script>
+      document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const { username, password, password_verify } = e.target;
 
-</body>
+        // Debug logging
+        console.log("username:", username.value);
+        console.log("password:", password.value);
+        console.log("password_verify:", password_verify.value);
+
+        // Create a temporary div as a response
+        function createResponse(class_type, message){
+          const msgTag = document.createElement("div");
+          msgTag.className = class_type;
+          msgTag.textContent = message;
+          document.body.appendChild(msgTag)
+          setTimeout(() => {cleanUpDiv(class_type);}, 3000);
+        }
+
+        // Create a temporary class to a tag
+        function insertClass(name, class_type){
+          const e = document.getElementsByName(name)[0];
+          e.classList.add(class_type);
+          setTimeout(() => {cleanUpClass(name, class_type);}, 3000);
+        }
+
+        // Removes all div with a specific class
+        function cleanUpDiv(className) {
+          const elements = document.querySelectorAll(`.${className}`);
+          elements.forEach(element => {
+              element.remove();
+          });
+        }
+        
+        // Removes a class from a tag with a specific name
+        function cleanUpClass(name, class_type){
+          const e = document.getElementsByName(name)[0];
+          e.classList.remove(class_type);
+        }
+
+        // Checks -------------------------------------------------------
+        
+        // Username is blank
+        if (username.value.trim() === ""){
+          createResponse("error_message", "User name can't be blank");
+          insertClass("username", "error");
+
+        // Passwords don't match
+        } else if (password.value !== password_verify.value){
+          createResponse("error_message", "Passwords don't match");
+          insertClass("password", "error");
+
+        // Password too short
+        } else if (password.value.length < 10){
+          createResponse("error_message", "Password needs to be 10 characters or longer");
+          insertClass("password", "error");
+
+        // All's good, signed up message
+        } else {
+          createResponse("success", "Avengers Assemble!");
+        }
+      });
+    </script>
+
+  </body>
 
 </html>
