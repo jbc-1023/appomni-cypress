@@ -22,7 +22,7 @@ describe('Signup', () => {
   /* Error handling */
   describe('Form validation displays an error when', () => {
     /* Empty username */
-    it('The username is empty', () => {
+    it('The username is empty', { tags: ["error_handling", "regression"] }, () => {
       const dummy_password = "anything";
       const look_text = "User name can't be blank";
       const tag_name_attr = "username";
@@ -36,7 +36,7 @@ describe('Signup', () => {
     });
 
     /* Password too short */
-    it('The password is less than 10 characters', () => {
+    it('The password is less than 10 characters', { tags: ["error_handling", "regression"] }, () => {
       const username = "Ant-Man";
       const short_password = "I'm tiny!";
       const look_text = "Password needs to be 10 characters or longer";
